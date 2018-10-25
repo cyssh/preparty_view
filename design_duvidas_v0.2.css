@@ -23,6 +23,7 @@ main{
 .topnav {
     background-color: #90aa26;
     overflow: hidden;
+    border-radius: 10px;
     /* position: fixed; */
 }
 
@@ -31,10 +32,11 @@ main{
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 5px 10px;
+    padding: 11px 10px;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
+    border-radius: 10px;
     /* border:1px solid black; */
 }
 
@@ -61,11 +63,23 @@ main{
   color: black;
   text-align: justify;
   padding: 10px;
+}
 
-  max-width: 5ch;
+.post {
+  position: relative;
+  display: inline-block;
+  word-wrap: break-word;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  max-height: 3.6em; /* (Number of lines you want visible) * (line-height) */
+  line-height: 1.2em;
+  text-align:justify;
+}
+
+.post.ellipsis::after {
+  content: "...";
+  position: absolute;
+  right: -12px;
+  bottom: 4px;
 }
 .parent_c{
   background: #7b5d7a7a;
@@ -88,6 +102,10 @@ main{
   margin-bottom: -55px;
   border-radius: 7px;
   padding: 5px;
+  padding-left: 10px;
+  text-align:justify;
+  height: 33px;
+  overflow: hidden;
 }
 
 .comment{
@@ -114,13 +132,14 @@ main{
   height:20px;
   background:white;
   left:42px;
-  top:20px;
+  top:15px;
   text-align: center;
   /* font-size: 15px; */
   padding-top: 5px;
   border-radius:15px;
   /* border:3px solid #90aa26; */
   margin: -17px;
+  margin-bottom: -38px;
 }
 
 .upvote{
@@ -182,3 +201,25 @@ main{
   margin:0;
   /* margin-left: 10px; */
 }
+
+.abrir_post{
+  /* color: #3b243a; */
+  color: white;
+  position:relative;
+  /* width:34px;
+  height:30px; */
+  /* background:white; */
+  left:690px;
+  top:55px;
+  text-align: center;
+  font-size: 12px;
+  padding: 3px;
+  border-radius:4px;
+  /* border:3px solid #90aa26; */
+  margin: 0;
+  margin-top: -10px;
+  background-color: #90aa26;
+}
+
+#logo_barra{width: 10%; height: auto; margin-bottom: -30px; position: relative;left: 675px;
+top: -40px;}
